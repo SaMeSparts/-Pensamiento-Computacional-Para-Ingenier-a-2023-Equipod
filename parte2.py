@@ -1,6 +1,6 @@
-r=int(input("Dame un numero para el radio del cono: "))
-h=int(input("Dame un numero para la altura del cono: "))
+r=int(input())
+h=int(input())
 pi=3.141592
 
 volumen=1/3*pi*r**2*h
-print("El volumen de tu cono es: ","%.3f"%volumen)
+print("%.3f"%volumen)
