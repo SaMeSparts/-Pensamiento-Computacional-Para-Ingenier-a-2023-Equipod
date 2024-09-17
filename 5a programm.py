@@ -9,6 +9,17 @@ def exp(a, b):
             count = count + 1
     return(c)
 
+def pokemon(v):
+    while v != "pikachu":
+        v = input()
+    if v == "pika!":
+        print("pika")
+    elif v == "pikapika":
+        print("chu")
+    elif v == "pikachu":
+        print("pikachu!!!")
+    else:
+        print("???")
 
 # pide opción y dependiendo de la opción llama una función diferente
 opcion = int(input("opción "))     
@@ -22,14 +33,3 @@ elif(opcion == 2):
 elif(opcion == 3):
     pok  = input("pokemon ")
     pokemon(pok)
-v = ""
-while v != "pikachu":
-    v = input()
-    if v == "pika!":
-        print("pika")
-    elif v == "pikapika":
-        print("chu")
-    elif v == "pikachu":
-        print("pikachu!!!")
-    else:
-        print("???")
