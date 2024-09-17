@@ -22,3 +22,14 @@ elif(opcion == 2):
 elif(opcion == 3):
     pok  = input("pokemon ")
     pokemon(pok)
+v = ""
+while v != "pikachu":
+    v = input()
+    if v == "pika!":
+        print("pika")
+    elif v == "pikapika":
+        print("chu")
+    elif v == "pikachu":
+        print("pikachu!!!")
+    else:
+        print("???")
