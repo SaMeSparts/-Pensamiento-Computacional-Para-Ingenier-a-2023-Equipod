@@ -21,6 +21,23 @@ def pokemon(v):
     else:
         print("???")
 
+def pi():
+    n=float(input(""))
+    num=1
+    res=0
+    pos=0
+    while num <= n:
+        if pos==1:
+            res=res + 1/num
+            num+=2
+            pos=0
+        else:
+            res=res-1/num
+            num+=2
+            pos=1
+
+print((res)*(4)*(-1))
+
 # pide opción y dependiendo de la opción llama una función diferente
 opcion = int(input("opción "))     
 if(opcion == 1):
