@@ -9,6 +9,7 @@ def exp(a, b):
             count = count + 1
     return(c)
 
+
 # pide opción y dependiendo de la opción llama una función diferente
 opcion = int(input("opción "))     
 if(opcion == 1):
