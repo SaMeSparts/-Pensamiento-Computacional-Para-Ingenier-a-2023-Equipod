@@ -1,5 +1,5 @@
-def pi(n):
-    n=float(input(""))
+def pi():
+    n  = int(input())
     num=1
     res=0
     pos=0
@@ -12,6 +12,7 @@ def pi(n):
             res=res-1/num
             num+=2
             pos=1
+    return(-4*res)
 
 def exp(a, b):
     count = 1
@@ -42,8 +43,8 @@ if(opcion == 1):
     exponente = float(input())
     print(exp(base, exponente))
 elif(opcion == 2):
-    n  = input()
-    print(pi(n))
+    n = ""
+    print(pi())
 elif(opcion == 3):
     v = ""
     pokemon(v)
