@@ -1,27 +1,4 @@
-def exp(a, b):
-    count = 1
-    if b == 0:
-        c = 1
-    else:
-        c = a
-        while count < b:
-            c = c * a
-            count = count + 1
-    return(c)
-
-def pokemon(v):
-    while v != "pikachu":
-        v = input()
-    if v == "pika!":
-        print("pika")
-    elif v == "pikapika":
-        print("chu")
-    elif v == "pikachu":
-        print("pikachu!!!")
-    else:
-        print("???")
-
-def pi():
+def pi(n):
     n=float(input(""))
     num=1
     res=0
@@ -36,17 +13,37 @@ def pi():
             num+=2
             pos=1
 
-print((res)*(4)*(-1))
+def exp(a, b):
+    count = 1
+    if b == 0:
+        c = 1
+    else:
+        c = a
+        while count < b:
+            c = c * a
+            count = count + 1
+    return(c)
 
-# pide opción y dependiendo de la opción llama una función diferente
-opcion = int(input("opción "))     
+def pokemon(v):
+    while v != "pikachu":
+        v = input()
+        if v == "pika!":
+            print("pika")
+        elif v == "pikapika":
+            print("chu")
+        elif v == "pikachu":
+            print("pikachu!!!")
+        else:
+            print("???")
+
+opcion = int(input())     
 if(opcion == 1):
-    base  = float(input("base "))
-    exponente = float(input("exp "))
+    base  = float(input())
+    exponente = float(input())
     print(exp(base, exponente))
 elif(opcion == 2):
-    n  = input("num ")
+    n  = input()
     print(pi(n))
 elif(opcion == 3):
-    pok  = input("pokemon ")
-    pokemon(pok)
+    v = ""
+    pokemon(v)
