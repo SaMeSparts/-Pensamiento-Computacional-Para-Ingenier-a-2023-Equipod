@@ -12,7 +12,8 @@ def pi():
             res=res-1/num
             num+=2
             pos=1
-    return(-4*res)
+    res2=-4*res
+    return("%.4f"%res2)
 
 def exp(a, b):
     count = 1
@@ -23,7 +24,7 @@ def exp(a, b):
         while count < b:
             c = c * a
             count = count + 1
-    return(c)
+    return("%.4f"%c)
 
 def pokemon(v):
     while v != "pikachu":
