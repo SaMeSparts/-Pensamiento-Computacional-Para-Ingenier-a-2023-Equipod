@@ -1,63 +1,60 @@
-lista=[]
-while 1==1:
-    def crear_lista(tamaño):
-        while tamaño != 0:
-            valor=int(input("valor: "))
-            lista.append(valor)
-            tamaño =tamaño - 1 
-        return lista   
+def captura_lista(tam):
+    lista = []
+    while tam > 0:
+        var = int(input())
+        lista.append(var)
+        tam = tam - 1
+    return(lista)
 
-    def inicializa_lista(lista,valor):
-        for i in lista:
-            lista[i] = valor
-        return lista
+def inicializa_lista(lista, valor):
+    for i in lista:
+        lista[lista.index(i)] = valor
+    return(lista)
 
-    def cuenta_impares(lista):
-        impares = 0
-        for elem in lista:
-            if elem % 2 != 0:
-                impares = impares +1
-        return impares
+def cuenta_impares(lista):
+    imp = 0
+    for i in lista:
+        if i%2 != 0:
+            imp = imp + 1
+    return(imp)
 
+def invierte_lista(lista):
+    i = len(lista)/2
+    a = 0
+    b = -1
+    while i > 0:
+        temp = lista[a]
+        lista[a] = lista[b]
+        lista[b] = temp
+        a = a+1
+        b = b-1
+        i = i-1
+    return(lista)
 
+def mayor(lista):
+    lista.sort()
+    return(lista[-1])
 
-    def inverti(temp):
-        i=0
-        max=len(lista[-1])
-        while i < max/2:
-            temp=lista[i]
-            lista=lista[max-i]
-            lista[max-i]=lista[i]
-            i=i-i
-
-    def mayor_valor(lista):
-        lista.sort()
-        print(lista[-1])
-
-    opcion=int(input("opcion: "))            
-    if opcion == 1:
-        tamaño1=int(input("tamaño: "))
-        lista=crear_lista(tamaño1)
-        print(lista)
-    elif opcion ==2:
-        tamaño2=int(input("tamaño: "))
-        lista2=crear_lista(tamaño2)
-        valor2=int(input("valor: "))
-        inicializa_lista(tamaño2,valor2)
-        print(lista2)
-    elif opcion ==3:
-        tamaño3=int(input("tamaño: "))
-        lista3=crear_lista(tamaño3)
-        cuenta_impares(lista)
-
-    elif opcion ==4:
-        tamaño4=int(input("tamaño: "))
-        lista4=crear_lista(tamaño4)
-        print(inverti(tamaño4))
-
-    elif opcion ==5:
-        tamaño5=int(input("tamaño: "))
-        lista5=crear_lista(tamaño5)
-        mayor_valor(lista5)
-    else:
-        print("del 1 al 5")
+opcion = int(input())
+if opcion == 1:
+    tam = int(input())
+    print(captura_lista(tam))
+elif opcion ==2:
+    tam = int(input())
+    lista = captura_lista(tam)
+    valor = int(input())
+    print(inicializa_lista(lista, valor))
+elif opcion == 3:
+    tam = int(input())
+    lista = captura_lista(tam)
+    print(cuenta_impares(lista))
+elif opcion == 4:
+    tam = int(input())
+    lista = captura_lista(tam)
+    print(invierte_lista(lista))
+elif opcion == 5:
+    tam = int(input())
+    lista = captura_lista(tam)
+    print(mayor(lista))
+else:
+    print("entrada no valida")
