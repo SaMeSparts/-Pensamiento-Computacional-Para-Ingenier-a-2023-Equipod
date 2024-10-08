@@ -23,12 +23,16 @@ def crear_matriz(e, i):
     return(matriz)
 
 def suma_diagonal(matriz):
+    acum = 0
     for i in matriz:
         x = matriz.index(i)
         acum = acum + matriz[x][x]
     return(acum)
 
 def suma_diagonal_inversa(matriz):
+    acum = 0
+    i = (len(matriz)) - 1
+    b = 0
     while i >= 0:
         acum = acum + matriz[b][i]
         i = i - 1
@@ -46,20 +50,20 @@ def encuentra_grupo(nombre):
 
 opcion = int(input())
 if opcion == 1:
-    interior = int(input())
     exterior = int(input())
+    interior = int(input())
     print(crear_matriz(exterior, interior))
 elif opcion == 2:
-    interior = int(input())
     exterior = int(input())
+    interior = int(input())
     if exterior != interior:
         print(False)
     else:
         matriz = crear_matriz(exterior, interior)
         print(suma_diagonal(matriz))
 elif opcion == 3:
-    interior = int(input())
     exterior = int(input())
+    interior = int(input())
     if exterior != interior:
         print(False)
     else:
