@@ -65,12 +65,16 @@ def obten_estrofa(cancion, linea):
     cancion = cancion.split("\n")
     for y in cancion:
         cancion[cancion.index(y)] = limpia_cadena(caracteres_seguros, y)
-    x = cancion.index(linea)
-    a = cancion[x + 1]
-    b = cancion[x + 2]
-    c = [a, b]
-    d = "\n".join(c)
-    return(d)
+    for y in cancion:
+        if linea in y:
+            x = cancion.index(y)
+            a = cancion[x + 1]
+            b = cancion[x + 2]
+            c = [a, b]
+            d = "\n".join(c)
+            return(d)
+        else:
+            pass
 
 def limpia_cadena(caracteres_seguros,cadena):
     lista=[]
@@ -91,10 +95,12 @@ def encuentra_relaciones(diccionario, palabra):
 opcion = int(input())
 if opcion == 1:
     cadena = input()
-    limpia_cadena(caracteres_seguros, cadena)
-if opcion == 2:
+    print(limpia_cadena(caracteres_seguros, cadena))
+elif opcion == 2:
     palabra = input()
     print(encuentra_relaciones(top_not_heros, palabra))
-if opcion == 3:
+elif opcion == 3:
     linea = input()
     print(obten_estrofa(a_friend_like_me, linea))
+else:
+    print("entrada no válida.")
