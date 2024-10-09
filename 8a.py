@@ -68,8 +68,15 @@ def obten_estrofa(cancion, linea):
     for y in cancion:
         if linea in y:
             x = cancion.index(y)
-            a = cancion[x + 1]
-            b = cancion[x + 2]
+            if x + 1 <= len(cancion) - 1:
+                a = cancion[x + 1]
+                if x + 2 <= len(cancion) - 1:
+                    b = cancion[x + 2]
+                else:
+                    b = ""
+            else:
+                a = ""
+                b = ""
             c = [a, b]
             d = "\n".join(c)
             return(d)
